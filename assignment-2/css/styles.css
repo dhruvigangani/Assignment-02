@@ -1,0 +1,135 @@
+/* CSS Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+/* Conatiner for the article */
+#container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(232,172,62);
+}
+
+/* Adding the | character for the heading */
+h1::before, h1::after {
+    content: "|";
+    top: 0;
+    padding: 3px;
+    height: 100%;
+    width: auto;
+    color: rgb(0,0,0);
+    font-size: 1.2em;
+}
+
+/* Having 3 cloumns in the article */
+article {
+    column-count: 3;
+    column-gap: 30px;
+    margin-top: 20px;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* targeting only the first h2 + p for styling */
+article h2:first-of-type{
+    font-size: 3em;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+article p:first-of-type{
+    font-size: 1em;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Styling the other h2 and p*/
+article h2, p{
+    font-size: 0.7em;
+}
+
+p strong{
+    color: rgb(232,164,62);
+}
+
+q {
+    font-style: italic;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+footer p{
+    font-size: 0.9em;
+    color: #000;
+}
+
+/* Media Queries for making the layout responsive */
+
+@media (max-width:900px) {
+    article {
+        column-count: 2;
+    }
+
+    article h2:first-of-type {
+        font-size: 2em;
+    }
+}
+
+@media (max-width:600px) {
+    article {
+        column-count: 1;
+    }
+
+    article h2:first-of-type {
+        font-size: 1.5em;
+    }
+
+    article h2 {
+        font-size: 1.1em;
+    }
+
+    article p{
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
+
+    footer p{
+        font-size: 0.8em;
+    }
+}
