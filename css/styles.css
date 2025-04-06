@@ -1,147 +1,135 @@
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Base styles for the body */
 body {
-	font-family: Georgia, 'Times New Roman', Times, serif; /* Set font family */
-	color: #333; /* Text color */
-	background-color: #f2f2f2; /* Background color */
-	margin: 20px; /* Margin around the body */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    background-color: #f2f2f2;
+    margin: 20px;
 }
 
-/* Container style for the overall layout */
+/* Conatiner for the article */
 #container {
-	background-color: #fff; /* White background for container */
-	max-width: 800px; /* Maximum width of the container */
-	margin: 0 auto; /* Center align the container */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the container */
-    padding: 20px; /* Padding inside the container */
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-/* Header styles */
 header {
-	text-align: center; /* Center align the header text */
-	margin-bottom: 20px; /* Space below the header */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Styles for the main heading */
 h1 {
-	font-size: 0.8em; /* Font size for the heading */
-    font-weight: bold; /* Bold font weight */
-    text-align: left; /* Left align the heading */
-    color: rgb(232, 172, 62); /* Custom color for the heading */
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: left;
+    color: rgb(232,172,62);
 }
 
-/* Decorative lines before and after the heading */
+/* Adding the | character for the heading */
 h1::before, h1::after {
-    content: "|"; /* Use pipe character for vertical lines */
-    top: 0; /* Align to the top of the heading */
-    padding: 3px; /* Padding around the lines */
-    height: 100%; /* Full height */
-    width: auto; /* Automatic width for text */
-    color: rgb(0, 0, 0); /* Color of the lines */
-    font-size: 1.2em; /* Font size for visibility */
+    content: "|";
+    top: 0;
+    padding: 3px;
+    height: 100%;
+    width: auto;
+    color: rgb(0,0,0);
+    font-size: 1.2em;
 }
 
-/* Styles for the article */
+/* Having 3 cloumns in the article */
 article {
-    column-count: 3; /* Create a 3-column layout */
-    column-gap: 30px; /* Gap between columns */
-    margin-top: 20px; /* Space above the article */
+    column-count: 3;
+    column-gap: 30px;
+    margin-top: 20px;
 }
 
-/* Styles for images in the article */
 article img {
-    width: 100%; /* Ensure the image fits the container */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space below the image */
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Styles for the first heading in the article */
-article h2:first-of-type {
-    font-size: 3em; /* Font size for the first heading */
-    color: #000000; /* Black color for visibility */
-    margin-top: 10px; /* Space above the heading */
-    margin-bottom: 5px; /* Space below the heading */
-    display: block; /* Ensure it's block-level to take full width */
+/* targeting only the first h2 + p for styling */
+article h2:first-of-type{
+    font-size: 3em;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: block;
 }
 
-/* Styles for the first paragraph in the article */
-article p:first-of-type {
-    font-size: 1em; /* Font size for the first paragraph */
-    text-align: center; /* Center align the text */
-    margin-top: 5px; /* Space above the paragraph */
-    margin-bottom: 20px; /* Space below the paragraph */
-    display: block; /* Ensure it's block-level */
+article p:first-of-type{
+    font-size: 1em;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px0;
+    display: block;
 }
 
-/* Styles for subsequent headings in the article */
-article h2 {
-    font-size: 0.7em; /* Font size for each heading */
+/* Styling the other h2 and p*/
+article h2, p{
+    font-size: 0.7em;
 }
 
-/* Styles for paragraphs in the article */
-article p {
-    font-size: 0.7em; /* Font size for regular paragraphs */
+p strong{
+    color: rgb(232,164,62);
 }
 
-/* Styles for strong text */
-p strong {
-    color: rgb(232, 164, 62); /* Custom color for strong text */
-}
-
-/* Optional: Styles for quotations */
 q {
-    font-style: italic; /* Italic style for quotes */
-    color: #000000; /* Color for quotes */
+    font-style: italic;
+    color: #000;
 }
 
-/* Styles for footer */
+/* Footer */
 footer {
-    padding-top: 10px; /* Padding above the footer content */
-    margin-top: 20px; /* Space above the footer */
+    padding-top: 10px;
+    margin-top: 20px;
 }
 
-/* Footer paragraph styles */
-footer p {
-    font-size: 0.9em; /* Font size for footer paragraph */
-    color: #555; /* Color for footer text */
+footer p{
+    font-size: 0.9em;
+    color: #000;
 }
 
-/* Media queries for making the layout responsive */
-@media (max-width: 900px) {
+/* Media Queries for making the layout responsive */
+
+@media (max-width:900) {
     article {
-        column-count: 2; /* 2 columns for medium screens */
+        column-count: 2;
     }
 
     article h2:first-of-type {
-        font-size: 2em; /* Smaller font size for heading */
+        font-size: 2em;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     article {
-        column-count: 1; /* Single column for small screens */
+        column-count: 1;
     }
 
     article h2:first-of-type {
-        font-size: 1.5em; /* Further reduced heading size for mobile */
+        font-size: 1.5em;
     }
 
     article h2 {
-        font-size: 1.1em; /* Smaller heading size */
+        font-size: 1.1em;
     }
 
-    article p {
-        font-size: 0.8em; /* Adjust paragraph font size */
-        margin-bottom: 10px; /* Less margin on mobile */
+    article p{
+        font-size: 0.8em;
+        margin-bottom: 10px;
     }
 
-    footer p {
-        font-size: 0.8em; /* Adjust footer font size */
+    footer p{
+        font-size: 0.8em;
     }
 }
